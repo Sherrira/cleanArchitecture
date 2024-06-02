@@ -8,12 +8,12 @@ package main
 
 import (
 	"database/sql"
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
-	"github.com/devfullcycle/20-CleanArch/internal/event"
-	"github.com/devfullcycle/20-CleanArch/internal/infra/database"
-	"github.com/devfullcycle/20-CleanArch/internal/infra/web"
-	"github.com/devfullcycle/20-CleanArch/internal/usecase"
-	"github.com/devfullcycle/20-CleanArch/pkg/events"
+	"github.com/Sherrira/cleanArchitecture/internal/entity"
+	"github.com/Sherrira/cleanArchitecture/internal/event"
+	"github.com/Sherrira/cleanArchitecture/internal/infra/database"
+	"github.com/Sherrira/cleanArchitecture/internal/infra/web"
+	"github.com/Sherrira/cleanArchitecture/internal/usecase"
+	"github.com/Sherrira/cleanArchitecture/pkg/events"
 	"github.com/google/wire"
 )
 
