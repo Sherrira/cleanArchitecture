@@ -50,19 +50,49 @@ A aplicação possui três tipos de API:
 Após subir o projeto, pode-se criar pedidos de três maneiras:
 
 - **Via HTTP:** Execute o arquivo "./api/create_order.http".
+
 - **Via gRPC:** Execute os comandos:
 ```
 $ make grpc 
 $ pb.OrderService@127.0.0.1:50051> call CreateOrder
 ```
-
+- **Via GraphQL:** 
+1) Em seu navegador, acesse o GraphQL Playground através do endereço [localhost:8080](localhost:8080)
+2) No espaço de edição de comandos, especifique a mutation conforme o exemplo abaixo:
+```graphql
+mutation createNewOrder {
+  createOrder (input: {id: "987654321a", Price: 9999.99, Tax: 0.9}){
+  	id
+    Price
+    Tax
+  }
+}
+```
+3) Execute a mutation createNewOrder, clicando no botão "Play"
+ 
 
 ## Listando pedidos
 Após subir o projeto, pode-se listar pedidos de três maneiras:
 
 - **Via HTTP:** Execute o arquivo "./api/list_orders.http".
+
 - **Via gRPC:** Execute os comandos:
 ```
 $ make grpc 
 $ pb.OrderService@127.0.0.1:50051> call ListOrders
 ```
+
+- **Via GraphQL:** 
+1) Em seu navegador, acesse o GraphQL Playground através do endereço [localhost:8080](localhost:8080)
+2) No espaço de edição de comandos, especifique a query conforme o exemplo abaixo:
+```graphql
+query listAllOrders {
+  listOrders {
+    id
+    Price
+    Tax
+    FinalPrice
+  }
+}
+```
+3) Execute a query listAllOrders, clicando no botão "Play"
